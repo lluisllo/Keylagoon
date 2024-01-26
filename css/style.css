@@ -5,15 +5,40 @@
 /* *********************************** */
 /* *** ESTILOS GENERALES *** */
 /* *********************************** */
+html {
+  font-family: ibm-medium;
+}
 
 /* Tipografía */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+  font-family: "ibm-medium";
+  src: url("../font/ibmplexsans-medium-webfont.woff2") format("woff2"),
+    url("../font/ibmplexsans-medium-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "ibm";
+  src: url("../font/ibmplexsans-regular-webfont.woff2") format("woff2"),
+    url("../font/ibmplexsans-regular-webfont.woff") format("woff");
 }
 
 /* ******************************** */
 
-/* Colores */
+/* Variables */
+:root {
+  /* Colores */
+  --Negro: #1e1e1e;
+  --Blanco: #e0e0e0; /* Background y popups */
+  --Campos-texto: #f1f1f1; /*Campos de texto*/
+  --Gris: #4d4f4d;
+  --Base: #308c6a;
+  --Accento: #174034;
 
+  /* Tamaño fuentes */
+  --h1: 3.9375em; /* 63px */
+  --h2: 3.1875em; /* 51px */
+  --h3: 2.4375em; /* 39px */
+  --h4: 1.5em; /* 24px */
+  --p: 1em; /* 16px */
+}
 /* ******************************** */
