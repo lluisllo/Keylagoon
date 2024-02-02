@@ -14,6 +14,10 @@ a:active {
   text-decoration: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 html {
   font-family: ibm-medium;
   background: url(../svg/Background.svg) no-repeat #e0e0e0;
@@ -25,6 +29,7 @@ html {
   height: 100vh;
 }
 
+/* ================== HEADER ================== */
 header {
   display: flex;
   align-items: center;
@@ -59,7 +64,7 @@ header {
     color: var(--Blanco);
     font-size: var(--h3);
     text-align: center;
-    padding: 10px 0;
+    padding: 8px 0;
 
     height: 80px;
     width: 377px;
@@ -70,6 +75,95 @@ header {
   }
 }
 
+/* ================== MAIN ================== */
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  & .main__instrucciones {
+    font-family: ibm;
+    font-size: 24px;
+    color: var(--Blanco);
+    line-height: 1.7;
+
+    margin: 4% 27% 0 27%;
+    text-align: center;
+  }
+}
+
+.generador {
+  height: 490px;
+  width: 1077px;
+  place-self: center;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(22, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  gap: 10px;
+
+  & .password {
+    grid-column: 3/21;
+    grid-row: 3/6;
+
+    background-color: var(--Blanco);
+    font-size: var(--h3);
+    border-radius: 34px;
+    padding: 2% 0;
+  }
+
+  & .new__password {
+    grid-column: 4/11;
+    grid-row: 7/9;
+
+    background-color: var(--Blanco);
+    font-size: var(--h4);
+    border-radius: 13px;
+    padding: 2% 0;
+  }
+
+  & .save__password {
+    grid-column: 13/20;
+    grid-row: 7/9;
+
+    background-color: var(--Accento);
+    color: var(--Blanco);
+    font-size: var(--h4);
+    border-radius: 13px;
+    padding: 2% 0;
+  }
+
+  & .settings__password {
+    grid-column: 5/19;
+    grid-row: 10/12;
+
+    background-color: var(--Blanco);
+    border-radius: 13px;
+    font-family: ibm-medium;
+    padding: 2% 0;
+  }
+}
+
+.copy-to-clipboard {
+  position: absolute;
+  top: 21.5%;
+  right: 12%;
+  cursor: pointer;
+}
+
+.copy-to-clipboard:hover {
+  & .path-svg {
+    fill: rgba(77, 79, 77, 0.8);
+  }
+}
+
+.copy-to-clipboard:active {
+  & .path-svg {
+    fill: var(--Base);
+  }
+}
 /* Tipografía */
 @font-face {
   font-family: "ibm-medium";

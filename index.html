@@ -45,7 +45,6 @@
 
   <body>
     <div id="container" class="container">
-      <!-- Header (encabezado de la página, zona superior) -->
       <header>
         <!--  -->
 
@@ -67,16 +66,66 @@
 
         <!--  -->
       </header>
-      <!-- Main (centro de la página, zona central) -->
+
       <main>
-        <!-- section y article (posibilidades dentro de main) -->
+        <!--  -->
+
+        <h4 class="main__instrucciones">
+          INSTRUCCIONES: Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Aperiam laboriosam possimus perferendis earum vel autem
+          distinctio repellat mollitia omnis, accusantium consectetur vero eum
+          ex deleniti
+        </h4>
+
+        <section class="generador">
+          <div class="password">
+            <p id="password" style="opacity: 0.6">Pulsa "Nueva contraseña"</p>
+
+            <!-- 
+              No está con img porque sinó no puedo 
+              manipular el path (que yo sepa) 
+            -->
+
+            <svg
+              width="37"
+              height="46"
+              viewBox="0 0 37 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="copy-to-clipboard"
+              id="copy-to-clipboard"
+            >
+              <path
+                class="path-svg"
+                d="M18.5 0C16.3809 0 14.8841 1.49682 14.1441 3.36364H0V45.4091H37V3.36364H22.8559C22.1159 1.49682 20.6191 0 18.5 0ZM18.5 3.36364C19.425 3.36364 20.1818 4.12045 20.1818 5.04545V6.72727H25.2273V10.0909H11.7727V6.72727H16.8182V5.04545C16.8182 4.12045 17.575 3.36364 18.5 3.36364ZM3.36364 6.72727H8.40909V13.4545H28.5909V6.72727H33.6364V42.0455H3.36364V6.72727ZM6.72727 18.5V21.8636H10.0909V18.5H6.72727ZM13.4545 18.5V21.8636H30.2727V18.5H13.4545ZM6.72727 25.2273V28.5909H10.0909V25.2273H6.72727ZM13.4545 25.2273V28.5909H30.2727V25.2273H13.4545ZM6.72727 31.9545V35.3182H10.0909V31.9545H6.72727ZM13.4545 31.9545V35.3182H30.2727V31.9545H13.4545Z"
+                fill="#4D4F4D"
+              />
+            </svg>
+          </div>
+
+          <button
+            class="new__password"
+            id="new__password"
+            onclick="nuevaContraseña()"
+          >
+            Nueva contraseña
+          </button>
+
+          <button class="save__password" id="save__password" onclick="">
+            Guardar contraseña
+          </button>
+
+          <div class="settings__password">settings</div>
+        </section>
+
+        <!--  -->
       </main>
-      <!-- Footer (final de la página, zona inferior) -->
+
       <footer>
         <!-- <h6>&copy;Copyright</h6> -->
       </footer>
     </div>
 
-    <script></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
