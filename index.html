@@ -83,7 +83,7 @@
 
             <!-- 
               No está con img porque sinó no puedo 
-              manipular el path (que yo sepa) 
+              manipular el 'path' 
             -->
 
             <svg
@@ -94,6 +94,7 @@
               xmlns="http://www.w3.org/2000/svg"
               class="copy-to-clipboard"
               id="copy-to-clipboard"
+              
             >
               <path
                 class="path-svg"
@@ -115,7 +116,28 @@
             Guardar contraseña
           </button>
 
-          <div class="settings__password">settings</div>
+          <div class="settings__password">
+            <!-- Slider -->
+            <input
+              type="range"
+              min="8"
+              max="32"
+              value="16"
+              class="lenght-slider"
+              id="lenght-slider"
+            />
+
+            <div class="slider-output" id="slider-output"></div>
+
+            <input
+              type="checkbox"
+              class="symbol-checkbox"
+              id="symbol-checkbox"
+              checked
+            />
+            <label style="font-size: 18px">&nbsp;&nbsp;Símbolos</label>
+            <!--  -->
+          </div>
         </section>
 
         <!--  -->

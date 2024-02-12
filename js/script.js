@@ -28,6 +28,18 @@ function asciiToArray(start, end) {
   return array;
 }
 
+// Slider
+let sliderInput = document.getElementById("lenght-slider");
+let sliderOutput = document.getElementById("slider-output");
+let stringLenght = sliderOutput.value;
+stringLenght = sliderInput.value;
+sliderOutput.innerHTML = sliderInput.value;
+
+sliderInput.oninput = function () {
+  sliderOutput.innerHTML = this.value;
+  stringLenght = this.value;
+};
+
 let randomString = "";
 let fullRandomString = "";
 
@@ -37,8 +49,7 @@ function nuevaContraseña() {
   let counts = { 0: 0, 1: 0, 2: 0, 3: 0 };
   let caracterAnterior = -1;
 
-  const length = 16;
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < stringLenght; i++) {
     let randomArray;
 
     // Evita dos carácteres seguidos procedentes del mismo array
@@ -50,10 +61,15 @@ function nuevaContraseña() {
 
     // Garantiza que haya, al menos, dos carácteres de cada tipo
     if (
-      i === length - 1 &&
-      !Object.values(counts).every((count) => count >= 2)
+      stringLenght > 8 &&
+      document.getElementById("symbol-checkbox").checked
     ) {
-      return nuevaContraseña();
+      if (
+        i === stringLenght - 1 &&
+        !Object.values(counts).every((count) => count >= 2)
+      ) {
+        return nuevaContraseña();
+      }
     }
 
     let charToAdd;
@@ -67,8 +83,10 @@ function nuevaContraseña() {
         counts[1]++;
         break;
       case 2:
-        charToAdd = getRandomChar(simbolos);
-        counts[2]++;
+        if (document.getElementById("symbol-checkbox").checked) {
+          charToAdd = getRandomChar(simbolos);
+          counts[2]++;
+        }
         break;
       case 3:
         charToAdd = getRandomChar(numeros);
@@ -100,7 +118,7 @@ function nuevaContraseña() {
   // Ocutar contraseña a partir de X carácteres
   fullRandomString = randomString;
   const displayedString =
-    randomString.length > 15 ? randomString.slice(0, 15) + "..." : randomString;
+    stringLenght > 15 ? randomString.slice(0, 15) + "..." : randomString;
 
   // Display contraseña
   document.getElementById("password").style = "opacity: 1;";
