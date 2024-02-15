@@ -56,10 +56,11 @@
 
         <h1>Keylagoon</h1>
 
+        <!-- Entrar / Registrarse -->
         <h3 class="entrar-registrarse">
-          <a href="">Entrar </a>
+          <p onclick="interfaceEntrar()">Entrar</p>
           <p>&nbsp;/&nbsp;</p>
-          <a href="">Registrarse</a>
+          <p onclick="interfaceRegistrarse()">Registrarse</p>
         </h3>
 
         <button class="header__bbdd">Mis contraseñas</button>
@@ -94,7 +95,6 @@
               xmlns="http://www.w3.org/2000/svg"
               class="copy-to-clipboard"
               id="copy-to-clipboard"
-              
             >
               <path
                 class="path-svg"
@@ -112,7 +112,11 @@
             Nueva contraseña
           </button>
 
-          <button class="save__password" id="save__password" onclick="">
+          <button 
+            class="save__password" 
+            id="save__password" 
+            onclick="interfaceGuardarContraseña()"
+          >
             Guardar contraseña
           </button>
 
@@ -121,8 +125,8 @@
             <input
               type="range"
               min="8"
-              max="32"
-              value="16"
+              max="30"
+              value="8"
               class="lenght-slider"
               id="lenght-slider"
             />
@@ -140,14 +144,80 @@
           </div>
         </section>
 
+        <article class="porque__contrasena">
+          <!--  -->
+
+          <h2>¿Qué hace que una contraseña sea segura?</h2>
+
+          <section class="exp__1">
+            <h4>Las contraseñas seguras son únicas y aleatorias</h4>
+            <p>
+              Los humanos no son muy buenos para crear contraseñas que sean
+              cualquiera de esas cosas, y mucho menos ambas. El 81% de las
+              filtraciones de datos son causadas por contraseñas reutilizadas o
+              débiles, por lo que las contraseñas únicas y aleatorias son su
+              mejor defensa contra las amenazas en línea.
+            </p>
+          </section>
+
+          <section class="exp__2">
+            <h4>¿Por qué mi contraseña debería ser única?</h4>
+            <p>
+              Si utiliza la misma contraseña tanto para su cuenta de correo
+              electrónico como para el inicio de sesión de su cuenta bancaria,
+              un atacante solo necesita robar una contraseña para obtener acceso
+              a ambas cuentas, duplicando su exposición. Si ha utilizado la
+              misma contraseña para 14 cuentas diferentes, le estará facilitando
+              mucho el trabajo al atacante. Puedes protegerte utilizando un
+              generador para crear contraseñas únicas y almacenarlas.
+            </p>
+          </section>
+
+          <section class="exp__3">
+            <h4>¿Por qué mi contraseña debería ser aleatoria?</h4>
+            <p>
+              Las contraseñas aleatorias son difíciles de adivinar y más
+              difíciles de descifrar para los programas informáticos. Si hay un
+              patrón discernible, las probabilidades de que un atacante utilice
+              un ataque de fuerza bruta y obtenga acceso a su cuenta aumentan
+              exponencialmente. Las contraseñas aleatorias pueden contener una
+              mezcla de caracteres no relacionados, pero combinar palabras no
+              relacionadas también funciona.
+            </p>
+          </section>
+
+          <!--  -->
+        </article>
+
+        <section 
+          class="interface-entrar" 
+          id="interface-entrar"
+        >
+          aaa
+        </section>
+
+        <section 
+          class="interface-registrarse" 
+          id="interface-registrarse"
+        ></section>
+
+        <section 
+          class="interface-guardar-contrasena" 
+          id="interface-guardar-contrasena"
+        ></section>
+
         <!--  -->
       </main>
 
-      <footer>
+      <footer class="main__footer">
         <!-- <h6>&copy;Copyright</h6> -->
       </footer>
     </div>
 
     <script src="js/script.js"></script>
+    
+    <?php
+      include ("php/conexiones.php");
+    ?>
   </body>
 </html>

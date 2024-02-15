@@ -1,3 +1,4 @@
+// ===================== Generador de contraseñas =====================
 // Arrays ASCII
 // https://fastbitlab.com/wp-content/uploads/2022/05/Figure-1-15-1200x705.png
 const mayusculas = asciiToArray(65, 90);
@@ -59,7 +60,7 @@ function nuevaContraseña() {
 
     caracterAnterior = randomArray;
 
-    // Garantiza que haya, al menos, dos carácteres de cada tipo
+    // Garantiza que haya, al menos, dos carácteres de cada tipo, si:
     if (
       stringLenght > 8 &&
       document.getElementById("symbol-checkbox").checked
@@ -172,8 +173,6 @@ function comprovarUpperLower(randomString) {
 document
   .getElementById("copy-to-clipboard")
   .addEventListener("click", function () {
-    const password = document.getElementById("password");
-
     copyToClipboard(fullRandomString);
   });
 
@@ -184,4 +183,25 @@ function copyToClipboard(fullRandomString) {
   textarea.select();
   document.execCommand("copy");
   document.body.removeChild(textarea);
+}
+
+// ===================== Interfaz de usuario =====================
+// interface-entrar
+function interfaceEntrar() {
+  interfaceEntrar = document.getElementById("interface-entrar");
+  interfaceEntrar.style = "display: block";
+}
+
+// interface-Registrarse
+function interfaceRegistrarse() {
+  interfaceRegistrarse = document.getElementById("interface-registrarse");
+  interfaceRegistrarse.style = "display: block";
+}
+
+// interface-GuardarContraseña
+function interfaceGuardarContraseña() {
+  interfaceGuardarContraseña = document.getElementById(
+    "interface-guardar-contrasena"
+  );
+  interfaceGuardarContraseña.style = "display: block";
 }

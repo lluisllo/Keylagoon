@@ -14,6 +14,10 @@ a:active {
   text-decoration: none;
 }
 
+button {
+  border: none;
+}
+
 button:hover {
   cursor: pointer;
   opacity: 0.85;
@@ -60,6 +64,7 @@ header {
 
     position: absolute;
     right: max(302px, 19%);
+    cursor: pointer;
   }
 
   & .header__bbdd {
@@ -95,11 +100,18 @@ main {
     margin: 4% 27% 0 27%;
     text-align: center;
   }
+
+  @media screen and (max-width: 1700px) {
+    .main__instrucciones {
+      font-size: 20px;
+      margin-top: 2%;
+    }
+  }
 }
 
 .generador {
   height: 490px;
-  width: 1077px;
+  width: 54%;
   place-self: center;
   position: relative;
 
@@ -114,7 +126,7 @@ main {
 
     background-color: var(--Blanco);
     font-size: var(--h3);
-    border-radius: 34px;
+    border-radius: 18px;
     padding: 2% 0;
   }
 
@@ -152,6 +164,67 @@ main {
     align-items: center;
     padding: 0 8%;
   }
+
+  @media screen and (max-width: 1700px) {
+    height: 1%;
+  }
+}
+
+/* ============= ¿Qué hace que una contraseña sea segura? ============= */
+.porque__contrasena {
+  position: absolute;
+  top: calc(100vh);
+  margin: 0 1%;
+  padding-top: 6%;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 33px;
+  background: var(--Blanco);
+
+  display: flex;
+  justify-content: space-evenly;
+
+  display: none;
+
+  & h2 {
+    position: absolute;
+    font-size: 24px;
+  }
+
+  section {
+    margin: 10% 0% 0 0%;
+    padding: 2% 1% 2% 1%;
+    width: 20%;
+    height: auto;
+    outline: solid 3px var(--Base);
+    border-radius: 12px;
+  }
+
+  h4 {
+    margin-bottom: 12%;
+  }
+
+  @media screen and (min-width: 1700px) {
+    h2 {
+      font-size: 39px;
+    }
+
+    h4 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+/* ============= FOOTER ============= */
+.main__footer {
+  top: calc(180vh + 300px);
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  background: var(--Accento);
 }
 
 /* ============= Copy to Clipboard ============= */
@@ -231,6 +304,37 @@ main {
   font-family: "ibm";
   src: url("../font/ibmplexsans-regular-webfont.woff2") format("woff2"),
     url("../font/ibmplexsans-regular-webfont.woff") format("woff");
+}
+
+/* ============= Campos de registro/entrada ============= */
+.interface-entrar,
+.interface-registrarse,
+.interface-guardar-contrasena {
+  display: none;
+}
+
+.interface-entrar {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  background: red;
+  top: 0;
+}
+
+.interface-registrarse {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  background: blueviolet;
+  top: 0;
+}
+
+.interface-guardar-contrasena {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  background: cyan;
+  top: 0;
 }
 
 /* ******************************** */
