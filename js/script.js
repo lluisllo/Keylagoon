@@ -124,6 +124,7 @@ function nuevaContraseña() {
   // Display contraseña
   document.getElementById("password").style = "opacity: 1;";
   document.getElementById("password").textContent = displayedString;
+  document.getElementById("contrasenaAGuardar").value = fullRandomString;
 }
 
 // Garantiza que no haya valores ASCII adyacentes entre si
@@ -191,11 +192,21 @@ function interfaceEntrar() {
   var interfaceEntrar = document.getElementById("interface-entrar");
   document.getElementById("container").style = "opacity: 0.5";
   interfaceEntrar.style = "display: block";
+  document.getElementById("interface-guardar-contrasena").style =
+    "display: none";
+  document.getElementById("interface-registrarse").style = "display: none";
 
   var closeButton = document.getElementById("closeButtonEntrar");
   closeButton.addEventListener("click", function () {
     interfaceEntrar.style = "display: none";
     document.getElementById("container").style = "opacity: 1";
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.keyCode === 27) {
+      interfaceEntrar.style = "display: none";
+      document.getElementById("container").style = "opacity: 1";
+    }
   });
 
   var noTengoCuenta = document.getElementById("no-tengo-cuenta");
@@ -210,11 +221,21 @@ function interfaceRegistrarse() {
   var interfaceRegistrarse = document.getElementById("interface-registrarse");
   document.getElementById("container").style = "opacity: 0.5";
   interfaceRegistrarse.style = "display: block";
+  document.getElementById("interface-entrar").style = "display: none";
+  document.getElementById("interface-guardar-contrasena").style =
+    "display: none";
 
   var closeButton = document.getElementById("closeButtonRegistrarse");
   closeButton.addEventListener("click", function () {
     interfaceRegistrarse.style = "display: none";
     document.getElementById("container").style = "opacity: 1";
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.keyCode === 27) {
+      interfaceRegistrarse.style = "display: none";
+      document.getElementById("container").style = "opacity: 1";
+    }
   });
 
   var yaTengoCuenta = document.getElementById("ya-tengo-cuenta");
@@ -229,12 +250,32 @@ function interfaceGuardarContraseña() {
   var interfaceGuardarContraseña = document.getElementById(
     "interface-guardar-contrasena"
   );
-  document.getElementById("container").style = "opacity: 0.5";
-  interfaceGuardarContraseña.style = "display: block";
+
+  var checkPassword = document.getElementById("password").value;
+
+  if (checkPassword !== null) {
+    document.getElementById("container").style = "opacity: 0.5";
+    interfaceGuardarContraseña.style = "display: block";
+    document.getElementById("interface-entrar").style = "display: none";
+    document.getElementById("interface-registrarse").style = "display: none";
+  }
 
   var closeButton = document.getElementById("closeButtonContrasena");
   closeButton.addEventListener("click", function () {
     interfaceGuardarContraseña.style = "display: none";
     document.getElementById("container").style = "opacity: 1";
   });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.keyCode === 27) {
+      interfaceGuardarContraseña.style = "display: none";
+      document.getElementById("container").style = "opacity: 1";
+    }
+  });
 }
+
+// Autoselect para guardar contraseña
+// https://chat.openai.com/share/7acdc67f-dcd3-450a-83ce-fef9620aefc4
+var currentDate = new Date();
+var formattedDate = currentDate.toISOString().split("T")[0];
+document.getElementById("dateInput").value = formattedDate;

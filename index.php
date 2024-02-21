@@ -47,7 +47,6 @@
 
     <input type="email" placeholder="Email..." required>
     <input type="password" placeholder="Contraseña..." required>
-
     <input type="submit" class="submit" value="Entrar">
     <p class="no-tengo-cuenta" id="no-tengo-cuenta">No tengo cuenta</p>
 
@@ -76,6 +75,16 @@
 
   <!-- Guardar contraseña -->
   <section class="interface-guardar-contrasena" id="interface-guardar-contrasena">
+
+    <h4>Guardar contraseña</h4>
+
+    <input type="text" class="contrasena-a-guardar" id="contrasenaAGuardar">
+    <p>*Puedes editar tu contraseña</p>
+
+    <input type="date" placeholder="Fecha..." id="dateInput">
+    <input type="text" placeholder="Motivo..." class="motivo-contrasena" required>
+    <input type="text" placeholder="Comentario..." class="comentario-contrasena">
+    <input type="submit" class="submit" value="Guardar contraseña">
 
     <span id="closeButtonContrasena">&times;</span>
   </section>

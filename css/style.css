@@ -207,7 +207,9 @@ main {
   display: flex;
   justify-content: space-evenly;
 
+  /* !!!!!!!!!!!!!!!!!! QUITAR !!!!!!!!!!!!!!!!!! */
   display: none;
+  /* !!!!!!!!!!!!!!!!!! QUITAR !!!!!!!!!!!!!!!!!! */
 
   & h2 {
     position: absolute;
@@ -387,7 +389,7 @@ main {
   }
 
   .submit {
-    margin-top: 8%;
+    margin-top: 12%;
     height: 16%;
     width: 18%;
   }
@@ -395,7 +397,7 @@ main {
 
 .interface-registrarse {
   width: 585px;
-  height: 72%;
+  height: 68%;
   max-height: 480px;
 
   & .ya-tengo-cuenta {
@@ -415,8 +417,50 @@ main {
 }
 
 .interface-guardar-contrasena {
-  width: 300px;
-  height: 300px;
+  width: 82%;
+  height: 64%;
+  max-height: 510px;
+  padding-right: 3%;
+
+  & .contrasena-a-guardar {
+    padding: 1%;
+    text-align: center;
+    margin: 3% 0 0 1%;
+    font-size: 24px;
+  }
+
+  p {
+    margin-left: 1%;
+    font-size: 14px;
+    color: var(--Gris);
+  }
+
+  .submit {
+    margin-top: 6%;
+    height: 16%;
+    width: 34%;
+  }
+
+  #dateInput,
+  .motivo-contrasena,
+  .comentario-contrasena {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #dateInput {
+    width: 12%;
+    max-width: 156px;
+    margin-left: 1%;
+  }
+
+  .motivo-contrasena {
+    width: 43%;
+  }
+
+  .comentario-contrasena {
+    width: 43%;
+  }
 }
 
 #closeButtonEntrar,
