@@ -188,20 +188,53 @@ function copyToClipboard(fullRandomString) {
 // ===================== Interfaz de usuario =====================
 // interface-entrar
 function interfaceEntrar() {
-  interfaceEntrar = document.getElementById("interface-entrar");
+  var interfaceEntrar = document.getElementById("interface-entrar");
+  document.getElementById("container").style = "opacity: 0.5";
   interfaceEntrar.style = "display: block";
+
+  var closeButton = document.getElementById("closeButtonEntrar");
+  closeButton.addEventListener("click", function () {
+    interfaceEntrar.style = "display: none";
+    document.getElementById("container").style = "opacity: 1";
+  });
+
+  var noTengoCuenta = document.getElementById("no-tengo-cuenta");
+  noTengoCuenta.addEventListener("click", function () {
+    interfaceEntrar.style = "display: none";
+    document.getElementById("interface-registrarse").style = "display: block";
+  });
 }
 
 // interface-Registrarse
 function interfaceRegistrarse() {
-  interfaceRegistrarse = document.getElementById("interface-registrarse");
+  var interfaceRegistrarse = document.getElementById("interface-registrarse");
+  document.getElementById("container").style = "opacity: 0.5";
   interfaceRegistrarse.style = "display: block";
+
+  var closeButton = document.getElementById("closeButtonRegistrarse");
+  closeButton.addEventListener("click", function () {
+    interfaceRegistrarse.style = "display: none";
+    document.getElementById("container").style = "opacity: 1";
+  });
+
+  var yaTengoCuenta = document.getElementById("ya-tengo-cuenta");
+  yaTengoCuenta.addEventListener("click", function () {
+    interfaceRegistrarse.style = "display: none";
+    document.getElementById("interface-entrar").style = "display: block";
+  });
 }
 
 // interface-GuardarContraseña
 function interfaceGuardarContraseña() {
-  interfaceGuardarContraseña = document.getElementById(
+  var interfaceGuardarContraseña = document.getElementById(
     "interface-guardar-contrasena"
   );
+  document.getElementById("container").style = "opacity: 0.5";
   interfaceGuardarContraseña.style = "display: block";
+
+  var closeButton = document.getElementById("closeButtonContrasena");
+  closeButton.addEventListener("click", function () {
+    interfaceGuardarContraseña.style = "display: none";
+    document.getElementById("container").style = "opacity: 1";
+  });
 }
