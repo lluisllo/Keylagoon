@@ -45,9 +45,11 @@
 
     <h4>Entrar</h4>
 
-    <input type="email" placeholder="Email..." required>
-    <input type="password" placeholder="Contraseña..." required>
-    <input type="submit" class="submit" value="Entrar">
+    <form action="php/conexiones.php" method="post">
+      <input type="email" placeholder="Email..." name="email" required>
+      <input type="password" placeholder="Contraseña..." name="contrasena" required>
+      <input type="submit" class="submit" value="Entrar">
+    </form>
     <p class="no-tengo-cuenta" id="no-tengo-cuenta">No tengo cuenta</p>
 
     <span id="closeButtonEntrar">&times;</span>
@@ -58,16 +60,18 @@
 
     <h4>Registro</h4>
 
-    <input type="email" placeholder="Email..." required>
-    <input type="password" placeholder="Contraseña..." required>
-    <input type="password" placeholder="Repetir contraseña..." required>
+    <form action="php/conexiones.php" method="post">
+      <input type="email" placeholder="Email..." name="email" required>
+      <input type="password" placeholder="Contraseña..." name="contrasena" required>
+      <input type="password" placeholder="Repetir contraseña..." name="repetirContrasena" required>
 
-    <label for="">
-      <input type="checkbox" class="checkbox" required>
-      Accepto términos y condiciones
-    </label><br>
+      <label for="">
+        <input type="checkbox" class="checkbox" required>
+        Accepto términos y condiciones
+      </label><br>
 
-    <input type="submit" class="submit" value="Registrarme">
+      <input type="submit" class="submit" value="Registrarme">
+    </form>
     <p class="ya-tengo-cuenta" id="ya-tengo-cuenta">Ya tengo cuenta</p>
 
     <span id="closeButtonRegistrarse">&times;</span>
@@ -78,13 +82,15 @@
 
     <h4>Guardar contraseña</h4>
 
-    <input type="text" class="contrasena-a-guardar" id="contrasenaAGuardar">
-    <p>*Puedes editar tu contraseña</p>
+    <form action="php/conexiones.php" method="post">
+      <input type="text" class="contrasena-a-guardar" name="contrasena" id="contrasenaAGuardar">
+      <p>*Puedes editar tu contraseña</p>
 
-    <input type="date" placeholder="Fecha..." id="dateInput">
-    <input type="text" placeholder="Motivo..." class="motivo-contrasena" required>
-    <input type="text" placeholder="Comentario..." class="comentario-contrasena">
-    <input type="submit" class="submit" value="Guardar contraseña">
+      <input type="date" placeholder="Fecha..." name="fecha" id="dateInput">
+      <input type="text" placeholder="Motivo..." name="motivo" class="motivo-contrasena" id="motivoContrasena" required>
+      <input type="text" placeholder="Comentario..." name="comentario" class="comentario-contrasena" id="comentarioContrasena">
+      <input type="submit" class="submit" value="Guardar contraseña">
+    </form>
 
     <span id="closeButtonContrasena">&times;</span>
   </section>

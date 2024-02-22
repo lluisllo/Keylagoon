@@ -264,12 +264,18 @@ function interfaceGuardarContraseña() {
   closeButton.addEventListener("click", function () {
     interfaceGuardarContraseña.style = "display: none";
     document.getElementById("container").style = "opacity: 1";
+    // Limpiar campos
+    document.getElementById("motivoContrasena").value = "";
+    document.getElementById("comentarioContrasena").value = "";
   });
 
   document.addEventListener("keydown", function (event) {
     if (event.keyCode === 27) {
       interfaceGuardarContraseña.style = "display: none";
       document.getElementById("container").style = "opacity: 1";
+      // Limpiar campos
+      document.getElementById("motivoContrasena").value = "";
+      document.getElementById("comentarioContrasena").value = "";
     }
   });
 }
