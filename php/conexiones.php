@@ -31,7 +31,7 @@ if ($conector) {
 
             // Insercción en la BBDD
             $sql = "INSERT INTO usuarios (email, contraseña) VALUES (
-                '$email','$hashed_password'
+                '$email', '$hashed_password'
             )";
 
             if (mysqli_query($conector, $sql)) {
