@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- SEO = Básico -->
     <!-- Cada página del sitio tiene que ser diferente el título y la descripción -->
-    <title>Keylagoon</title>
+    <title>Keylagoon - Home</title>
 
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -65,9 +65,9 @@
           required
         />
 
-        <label for="">
-          <input type="checkbox" class="checkbox" required />
-          Accepto términos y condiciones </label
+        <label for="therms_cb">
+          <input type="checkbox" class="checkbox" id="therms_cb" required />
+          Accepto términos y condiciones</label
         ><br />
 
         <input type="submit" class="submit" value="Registrarme" />
@@ -81,7 +81,7 @@
     <section class="interface-entrar" id="interface-entrar">
       <h4>Entrar</h4>
 
-      <form action="php/conexiones.php" method="post">
+      <form action="php/conexiones.php" method="get">
         <input type="email" placeholder="Email..." name="email" required />
         <input
           type="password"
