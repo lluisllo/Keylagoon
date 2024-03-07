@@ -10,34 +10,41 @@
 <body>
 
     <?php
-
     // Log in / Entrar
+    include 'pdo.php';
+    $pdo = new Conexion();
+
     session_start();
 
-    if (isset($_POST['login'])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST['email'];
         $password = $_POST['contrasena'];
 
-        // Recuperar usuario de la BBDD
-        $sql = "SELECT * FROM usuarios WHERE email = '$email'";
-        $resultado = mysqli_query($conector, $sql);
+        // Recuperar usuario de la BBDD 
+        $sql = $pdo->prepare("SELECT * FROM usuarios WHERE email = ?");
+        $sql->execute([$email]);
+        $user = $sql->fetch(PDO::FETCH_ASSOC);
 
-        if (mysqli_num_rows($resultado) == 1) {
-            $row = mysqli_fetch_assoc($resultado);
-            if (password_verify($password, $row['contraseña'])) {
-                $_SESSION['id_usuario'] = $row['id'];
-                echo ("Login exitoso");
-                header("Location: index.html"); // !!!!!!!!!!!!!!
+        if ($user) {
+            if (password_verify($password, $user['contraseña'])) {
+                // Set session variables
+                $_SESSION['id_usuario'] = $user['id_usuario'];
+                $_SESSION['email'] = $user['email']; // Set the email in the session
+                echo "Login exitoso";
+                header("Location: ../");
                 exit();
             } else {
-                echo ("Contraseña incorrecta");
+                echo "Contraseña incorrecta";
             }
         } else {
-            echo ("Este usuario no existe");
+            echo "Este usuario no existe";
         }
+    } else {
+        echo "<b>Error, condición if no cumplida</b>";
     }
-
     ?>
+
+
 
 </body>
 

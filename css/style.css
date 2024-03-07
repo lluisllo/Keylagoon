@@ -474,7 +474,47 @@ main {
 }
 
 /* ******************************** */
+.nombre-usuario {
+  cursor: auto;
+  padding-top: 12px;
+  margin-right: 6%;
+  color: var(--Base);
+}
 
+.logout-input {
+  color: var(--Blanco);
+  background-color: var(--Accento);
+  font-weight: 100;
+  height: 5%;
+  min-height: 58px;
+  width: 100%;
+  border: none;
+  border-radius: 11px;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+.logout-input:hover {
+  opacity: 0.85;
+}
+
+.logout-input:active {
+  opacity: 1;
+}
+
+/* background-color: var(--Accento);
+    color: var(--Blanco);
+    font-size: var(--h4);
+
+    padding: 8px 0;
+
+    height: 5%;
+    min-height: 58px;
+    width: 14%;
+    border: none;
+    border-radius: 11px;
+    position: absolute;
+    right: 72px; */
 /* ============= Variables ============= */
 :root {
   /* Colores */
