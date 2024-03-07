@@ -236,7 +236,20 @@ session_start();
     </main>
 
     <footer class="main__footer">
-      <!-- <h6>&copy;Copyright</h6> -->
+      <h6>© 2024 Keylagoon.Todos los derechos reservados.</h6>
+      <h6>
+        Terminos de servicios -
+        Politica de privacidad -
+        Accesibilidad -
+        Opciones de privacidad
+      </h6>
+      <div class="rrss">
+        <img class="rrss__svg" src="svg/facebook Vector.svg" alt="">
+        <img class="rrss__svg" src="svg/mail Vector.svg" alt="">
+        <img class="rrss__svg" src="svg/telef Vector.svg" alt="">
+        <img class="rrss__svg" src="svg/Twitter Vector.svg" alt="">
+        <img class="rrss__svg" src="svg/whats Vector.svg" alt="">
+      </div>
     </footer>
   </div>
 

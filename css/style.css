@@ -211,10 +211,6 @@ main {
   display: flex;
   justify-content: space-evenly;
 
-  /* !!!!!!!!!!!!!!!!!! QUITAR !!!!!!!!!!!!!!!!!! */
-  display: none;
-  /* !!!!!!!!!!!!!!!!!! QUITAR !!!!!!!!!!!!!!!!!! */
-
   & h2 {
     position: absolute;
     font-size: 24px;
@@ -255,6 +251,31 @@ main {
   width: 100%;
   height: 130px;
   background: var(--Accento);
+
+  display: flex;
+  justify-content: space-between;
+
+  & h6 {
+    color: var(--Blanco);
+    font-weight: 100;
+    margin-top: 79px;
+  }
+
+  h6:nth-child(1) {
+    margin-left: 3%;
+  }
+
+  .rrss {
+    margin-right: 3%;
+    width: 27%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  & .rrss__svg {
+    width: 34px;
+  }
 }
 
 /* ============= Copy to Clipboard ============= */
