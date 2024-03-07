@@ -35,7 +35,7 @@
 
             header("HTTP/1.1 200 OK");
             echo "<b>Usuario registrado con éxito<b>";
-            // header("Location: ../");
+            header("Location: ../");
             exit();
         } else {
             echo ("<br>Las contraseñas no coinciden");

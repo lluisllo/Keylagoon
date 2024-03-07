@@ -84,7 +84,7 @@ session_start();
   <section class="interface-guardar-contrasena" id="interface-guardar-contrasena">
     <h4>Guardar contraseña</h4>
 
-    <form action="php/conexiones.php" method="post">
+    <form action="php\guardarContrasena.php" method="post">
       <input type="text" class="contrasena-a-guardar" name="contrasena" id="contrasenaAGuardar" />
       <p>*Puedes editar tu contraseña</p>
 
@@ -112,7 +112,7 @@ session_start();
 
       <!-- Entrar / Registrarse -->
       <h3 class="entrar-registrarse">
-        <!-- Si hau un usuario loged -->
+        <!-- Si hay un usuario loged -->
         <?php
         if (isset($_SESSION['id_usuario']) && isset($_SESSION['email'])) {
           $user_email = explode('@', $_SESSION['email'])[0];
@@ -134,7 +134,11 @@ session_start();
         ?>
       </h3>
 
-      <button class="header__bbdd">Mis contraseñas</button>
+      <a href="php/contrasenasGuardadas.php" class="contrasenas-guardadas">
+        <button class="header__bbdd">
+          Mis contraseñas
+        </button>
+      </a>
 
       <!--  -->
     </header>

@@ -106,6 +106,10 @@ header {
     position: absolute;
     right: 72px;
   }
+
+  & .contrasenas-guardadas {
+    margin-top: -58px;
+  }
 }
 
 /* ================== MAIN ================== */
@@ -502,19 +506,41 @@ main {
   opacity: 1;
 }
 
-/* background-color: var(--Accento);
-    color: var(--Blanco);
-    font-size: var(--h4);
+/* ************** Contraseñas guardadas ****************** */
+.main-contrasenas-guardadas {
+  background: var(--Blanco);
+  border: solid 2px var(--Base);
+  border-radius: 11px;
+  width: 80%;
 
-    padding: 8px 0;
+  height: auto;
+  padding: 3%;
+  margin: 5% auto 0 auto;
+}
 
-    height: 5%;
-    min-height: 58px;
-    width: 14%;
-    border: none;
-    border-radius: 11px;
-    position: absolute;
-    right: 72px; */
+.contrasenas-guardadas-php {
+  width: 95%;
+  background: #f1f1f1;
+
+  margin: 2% auto 0 0;
+}
+
+.contenedor-contrasenas {
+  border: solid 1px;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.contenedor-contrasenas * {
+  left: 0;
+  margin-right: 5%;
+  padding-left: 1%;
+}
+
+.contenedor-contrasenas > *:not(:first-child) {
+  border-left: solid;
+}
+
 /* ============= Variables ============= */
 :root {
   /* Colores */

@@ -10,36 +10,49 @@
 <body>
 
     <?php
-
     // Guardar contraseña
     session_start();
 
+    // Comprobar si hay sesión iniciado por un usuario
     if (!isset($_SESSION['id_usuario'])) {
-        header("Location: index.html");
+        header("Location: ../");
         exit();
     }
 
-    if (isset($_POST['guardar_contrasena'])) {
+    include 'pdo.php';
+    $pdo = new Conexion();
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = $_POST['contrasena'];
         $date = $_POST['fecha'];
         $motive = $_POST['motivo'];
         $comment = $_POST['comentario'];
-        $id_usuario = $SESSION['id_usuario'];
+        $id_usuario = $_SESSION['id_usuario'];
 
-        // Insertar en la BBDD
-        $sql = "INSERT INTO contraseñas (
-                        id_usuario, contraseña, fecha, motivo, comentario 
-                    ) VALUES (
-                        '$id_usuario', '$password', '$date', '$motive', '$comment'
-                    )";
+        // Sentencia sql con placeholders
+        $sql = "INSERT INTO contraseñas (id_usuario, contraseña, fecha, motivo, comentario) 
+            VALUES (:id_usuario, :password, :date, :motive, :comment)";
 
-        if (mysqli_query($conector, $sql)) {
+        // Preparamos la sentencia
+        $stmt = $pdo->prepare($sql);
+
+        // Enlazamos los parametros
+        $stmt->bindParam(':id_usuario', $id_usuario);
+        $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':date', $date);
+        $stmt->bindParam(':motive', $motive);
+        $stmt->bindParam(':comment', $comment);
+
+        // Execute la sentencia
+        if ($stmt->execute()) {
             echo "Contraseña guardada correctamente";
+            header("Location: ../");
+            exit();
         } else {
-            echo ("Error: " . $sql . "<br>" . mysqli_error($conector));
+            echo "Error al guardar la contraseña";
         }
+    } else {
     }
-
     ?>
 
 </body>
