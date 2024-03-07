@@ -147,10 +147,10 @@ session_start();
       <!--  -->
 
       <h4 class="main__instrucciones">
-        INSTRUCCIONES: Lorem ipsum, dolor sit amet consectetur adipisicing
-        elit. Aperiam laboriosam possimus perferendis earum vel autem
-        distinctio repellat mollitia omnis, accusantium consectetur vero eum
-        ex deleniti
+        INSTRUCCIONES: Pulsa para generar una contraseña <br>
+        Puedes ajustar el tamaño o fórmula de la contraseña <br>
+        Regístrate para guardar tus contraseñas de forma segura <br>
+        <h6>*Si desactivos los símbolos reduce el tamaño máximo de la contraseña</h6>
       </h4>
 
       <section class="generador">
