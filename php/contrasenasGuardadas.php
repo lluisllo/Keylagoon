@@ -56,6 +56,12 @@ $passwords = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <input type="submit" value="Logout" class="logout-input">
                     </form>
 
+                    <a href="../" class="">
+                        <button class="contrasenas-guardadas">
+                            Inicio
+                        </button>
+                    </a>
+
                     <!-- Si no hay un usuario en sesión -->
                 <?php
                 } else {
@@ -68,11 +74,7 @@ $passwords = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 ?>
             </h3>
 
-            <a href="../" class="contrasenas-guardadas">
-                <button class="header__bbdd">
-                    Inicio
-                </button>
-            </a>
+
 
             <!--  -->
         </header>

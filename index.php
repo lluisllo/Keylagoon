@@ -122,6 +122,12 @@ session_start();
             <input type="submit" value="Logout" class="logout-input">
           </form>
 
+          <a href="php/contrasenasGuardadas.php" class="">
+            <button class="contrasenas-guardadas">
+              Mis contraseñas
+            </button>
+          </a>
+
           <!-- Si no hay un usuario en sesión -->
         <?php
         } else {
@@ -134,11 +140,7 @@ session_start();
         ?>
       </h3>
 
-      <a href="php/contrasenasGuardadas.php" class="contrasenas-guardadas">
-        <button class="header__bbdd">
-          Mis contraseñas
-        </button>
-      </a>
+
 
       <!--  -->
     </header>
