@@ -1,0 +1,29 @@
+.gitignore
+
+================================
+
+# TODO
+
+- Cifrar contraseñas usuarios
+  - Usar Código único usuario?
+- Función recuperar contraseña
+  - Usar Código único usuario?
+- Responsive
+- Retoques estéticos
+
+# Posible implementación
+
+- Usar objetos?
+- AJAX/JQuery?
+
+================================
+
+# FALLOS CONOCIDOS
+
+- Hacer logout desde 'mis contraseñas' da error
+- Arreglar 'Ya tengo cuenta/No tengo cuenta'
+- Links de Política de privacidad, Términos de servicio, RRSS, etc
+- Ajustar Footer
+- UI feo de cojones
+
+================================

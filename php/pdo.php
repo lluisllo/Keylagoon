@@ -6,14 +6,14 @@ class Conexion extends PDO
     private $host = "localhost";
     private $user = "edib";
     private $password = "edib";
-    private $bbdd = "Keylagoon";
+    private $bbdd = "ddb219298";
 
     // Credenciales
     // private $host = "bbdd.lluisllodraedib.com";
     // private $user = "ddb219298";
     // private $password = "7894561Ll";
     // private $bbdd = "ddb219298";
-    // private $port = 3306;S
+    // private $port = 3306;
 
     public function __construct()
     {

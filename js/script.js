@@ -281,7 +281,6 @@ function interfaceGuardarContraseña() {
 }
 
 // Autoselect para guardar contraseña
-// https://chat.openai.com/share/7acdc67f-dcd3-450a-83ce-fef9620aefc4
 var currentDate = new Date();
 var formattedDate = currentDate.toISOString().split("T")[0];
 document.getElementById("dateInput").value = formattedDate;

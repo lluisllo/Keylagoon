@@ -240,8 +240,7 @@ session_start();
       <h6>
         Terminos de servicios -
         Politica de privacidad -
-        Accesibilidad -
-        Opciones de privacidad
+        Accesibilidad
       </h6>
       <div class="rrss">
         <img class="rrss__svg" src="svg/facebook Vector.svg" alt="">

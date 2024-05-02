@@ -52,7 +52,7 @@ $passwords = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     $user_email = explode('@', $_SESSION['email'])[0];
                     echo "<p class='nombre-usuario'>$user_email</p>";
                 ?>
-                    <form class="logout-form" action="php/logout.php" method="post">
+                    <form class="logout-form" action="logout.php" method="post">
                         <input type="submit" value="Logout" class="logout-input">
                     </form>
 
@@ -101,8 +101,6 @@ $passwords = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </main>
     </div>
 
-
 </body>
-
 
 </html>
