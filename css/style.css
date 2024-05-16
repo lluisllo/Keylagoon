@@ -548,33 +548,52 @@ main {
   border: solid 2px var(--Base);
   border-radius: 11px;
   width: 80%;
-
   height: auto;
-  padding: 3%;
+  padding: 3% 0 3% 3%;
   margin: 5% auto 0 auto;
 }
 
-.contrasenas-guardadas-php {
-  width: 95%;
-  background: #f1f1f1;
-
+.tabla-contrasenas {
   margin: 2% auto 0 0;
+
+  & .tabla-cabezeras {
+    width: 95%;
+    background: var(--Campos-texto);
+    margin: 2% auto 0 0;
+  }
+
+  .tabla-contenido {
+    width: 95%;
+    background: var(--Campos-texto);
+    margin: 2% auto 0 0;
+  }
+
+  th {
+    font-weight: bold;
+    text-align: left;
+    padding-left: 4px;
+    color: #308c6a;
+  }
+
+  td {
+    text-align: left;
+    padding-left: 6px;
+  }
 }
 
-.contenedor-contrasenas {
-  border: solid 1px;
-  border-radius: 4px;
-  text-align: left;
+.btn-eliminar-contrasena {
+  width: 25%;
+  margin-left: 4%;
 }
 
-.contenedor-contrasenas * {
-  left: 0;
-  margin-right: 5%;
-  padding-left: 1%;
+.btn-eliminar-contrasena:hover {
+  cursor: pointer;
 }
 
-.contenedor-contrasenas > *:not(:first-child) {
-  border-left: solid;
+td:nth-child(5),
+th:nth-child(5) {
+  width: 5%;
+  background: var(--Blanco);
 }
 
 /* ============= Variables ============= */

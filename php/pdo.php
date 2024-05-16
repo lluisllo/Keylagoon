@@ -27,7 +27,7 @@ class Conexion extends PDO
                 array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
             );
         } catch (PDOException $e) {
-            echo 'Error: ' . $e->getMessage();
+            echo 'Error: Database connection failed. ' . $e->getMessage();
             exit;
         }
     }

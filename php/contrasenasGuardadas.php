@@ -83,23 +83,38 @@ $passwords = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <h4>Mis Contraseñas</h4>
 
             <?php if (!empty($passwords)) : ?>
-                <ul class="password-list">
-                    <!-- Listado de contraseñas -->
-                    <?php foreach ($passwords as $password) : ?>
-                        <li class="contrasenas-guardadas-php">
-                            <div class="contenedor-contrasenas">
-
-                                <strong>Fecha:</strong> <?php echo $password['fecha']; ?>
-                                <strong>Motivo:</strong> <?php echo $password['motivo']; ?>
-                                <strong>Comentario:</strong> <?php echo $password['comentario']; ?>
-                                <strong>Contraseña:</strong> <?php echo $password['contraseña']; ?>
-                            </div>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
+                <table class="tabla-contrasenas">
+                    <thead>
+                        <tr class="tabla-cabezeras">    
+                            <th>Fecha</th>
+                            <th>Motivo</th>
+                            <th>Comentario</th>
+                            <th>Contraseña</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Listado de contraseñas -->
+                        <?php foreach ($passwords as $password) : ?>
+                            <tr class="tabla-contenido ">
+                                <td><?php echo $password['fecha']; ?></td>
+                                <td><?php echo $password['motivo']; ?></td>
+                                <td><?php echo $password['comentario']; ?></td>
+                                <td><?php echo $password['contraseña']; ?></td>
+                                <td>
+                                    <img src="../svg/Eliminar.svg" alt="" class="btn-eliminar-contrasena">
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
             <?php else : ?>
                 <p>No hay contraseñas guardadas.</p>
             <?php endif; ?>
+
+
+            <!-- controles -->
+
         </main>
     </div>
 

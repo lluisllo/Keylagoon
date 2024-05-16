@@ -8,6 +8,7 @@
   - Usar Código único usuario?
 - Función recuperar contraseña
   - Usar Código único usuario?
+- Borrar usuarios que no logean cada X
 - Responsive
 - Retoques estéticos
 
@@ -20,9 +21,10 @@
 
 # FALLOS CONOCIDOS
 
-- Hacer logout desde 'mis contraseñas' da error
+- Al borrar un usuario, no se borran las contraseñas asociadas
+- Pueden haber usuarios con el mismo email
 - Arreglar 'Ya tengo cuenta/No tengo cuenta'
-- Links de Política de privacidad, Términos de servicio, RRSS, etc
+- Añadir links de Política de privacidad, Términos de servicio, RRSS, etc
 - Ajustar Footer
 - UI feo de cojones
 

@@ -43,7 +43,7 @@
         }
     } else {
         header("HTTP/1.1 400 Bad Request");
-        echo "<br>Error al introducir el boleto<br>";
+        echo "<br>Error al registrar usuario<br>";
     }
 
     ?>
