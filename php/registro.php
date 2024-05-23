@@ -25,17 +25,23 @@
             // Censurar contraseña
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
+            // Crear código de verificación
+            $verification_code = rand(100000000, 900000000);
+
             // Insercción en la BBDD
             $sql = $pdo->prepare(
-                "INSERT INTO usuarios (email, contraseña) VALUES (?, ?)"
+                "INSERT INTO usuarios (email, contraseña, code ) VALUES (?, ?, ?)"
             );
 
             // Ejecutamos la query 
-            $sql->execute([$email, $hashed_password]);
+            $sql->execute([$email, $hashed_password, $verification_code]);
+
+            // Interceptar id del usuario
+            $id_usuario = $pdo->lastInsertId();
 
             header("HTTP/1.1 200 OK");
             echo "<b>Usuario registrado con éxito<b>";
-            header("Location: ../");
+            header("Location: email.php?email=" . urlencode($email) . "&id=" . urlencode($id_usuario) . "&code=" . urlencode($verification_code));
             exit();
         } else {
             echo ("<br>Las contraseñas no coinciden");

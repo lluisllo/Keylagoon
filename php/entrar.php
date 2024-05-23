@@ -26,23 +26,27 @@
         $user = $sql->fetch(PDO::FETCH_ASSOC);
 
         if ($user) {
-            if (password_verify($password, $user['contraseña'])) {
-                // Set session variables
-                $_SESSION['id_usuario'] = $user['id_usuario'];
-                $_SESSION['email'] = $user['email']; // Set the email in the session
-                echo "Login exitoso";
-                header("Location: ../");
-                exit();
+            if (is_null($user['code']) || $user['code'] === '') {
+                if (password_verify($password, $user['contraseña'])) {
+                    $_SESSION['id_usuario'] = $user['id_usuario'];
+                    $_SESSION['email'] = $user['email'];
+                    echo "Login exitoso";
+                    header("Location: ../");
+                    exit();
+                } else {
+                    echo "Contraseña incorrecta";
+                }
             } else {
-                echo "Contraseña incorrecta";
+                echo "Usuario no verificado, consulte su email";
             }
         } else {
-            echo "Este usuario no existe";
+            echo "Email y/o contraseña incorrectos";
         }
     } else {
-        echo "<b>Error, condición if no cumplida</b>";
+        echo "Email y/o contraseña incorrectos (user)";
     }
     ?>
+
 
 </body>
 

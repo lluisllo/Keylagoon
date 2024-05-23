@@ -11,7 +11,7 @@ class Conexion extends PDO
     // Credenciales
     // private $host = "bbdd.lluisllodraedib.com";
     // private $user = "ddb219298";
-    // private $password = "7894561Ll";
+    // private $password = "lVsfg(DqKJwh,6";
     // private $bbdd = "ddb219298";
     // private $port = 3306;
 

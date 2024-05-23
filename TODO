@@ -14,14 +14,14 @@
 
 # Posible implementación
 
-- Usar objetos?
+- Usar objetos? (hell nah)
 - AJAX/JQuery?
 
 ================================
 
 # FALLOS CONOCIDOS
 
-- Al borrar un usuario, no se borran las contraseñas asociadas
+- Al borrar un usuario, no se borran las contraseñas asociadas (desde base de datos)
 - Pueden haber usuarios con el mismo email
 - Arreglar 'Ya tengo cuenta/No tengo cuenta'
 - Añadir links de Política de privacidad, Términos de servicio, RRSS, etc
